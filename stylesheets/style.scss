@@ -1,0 +1,247 @@
+// blue
+$blue : #2DA8DF;
+$light-blue : #80B4CC;
+$dark-blue : #1F6C8E;
+$very-dark-blue :#214454;
+// white & grey
+
+$white: #ffffff;
+$light-grey : #F3F3F3;
+$grey : #DCDCDC;
+$dark-grey : #868686;
+
+$font-hind : 'Montserrat', sans-serif;
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-hind;
+}
+
+body{
+	font-family: $font-hind;
+}
+
+.navbar{
+	border-radius: 0px;
+}
+.navbar-default{
+	background-color: $blue;
+	border: 0px;
+	border-bottom: 1px solid $dark-blue;
+
+	.navbar-brand{
+		color: $white;
+	}
+
+	.navbar-nav>li>a{
+		color: $white;
+	}
+
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{
+	color: $dark-blue;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus{
+	background-color: $white;
+		color: $blue;
+}
+
+.top-buffer{
+	margin-top: 20px;
+}
+
+.list-group-item.light-blue{
+	background-color: $blue;
+	border-color: $blue;
+}
+
+
+.thumb{
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+
+.icon{
+	width: 78px;
+	height: 78px;
+	background: $very-dark-blue;
+	border-radius: 12px;
+	background-size: 40px;
+	background-repeat: no-repeat;
+	background-position: center center; 
+	margin: 0 auto;
+	text-align: center;
+
+	i{
+		margin-top: 23px;
+		font-size: 35px;
+		color: $white;
+	}
+
+}
+
+.icon.blue{
+	background-color: $blue;
+}
+
+.light-blue:hover{
+	background-color: $blue !important;
+}
+
+.circle-date{
+	width: 80px;
+	height: 80px;
+	border-radius: 40px;
+	background-color: $dark-grey;
+	color: $white;
+	text-align: center;
+	padding: 22px;
+}
+
+.dropdown-menu{
+	top:100px;
+	padding-left: 15px;
+	padding-right: 15px; 
+}
+
+
+// calculator
+.cal-bg{
+	width: 100%;
+	height: 330px;
+	position: fixed;
+	bottom: 0px;
+	background: rgba(72,95,115,0.71);
+}
+
+.cal-body{
+	width: 310px;
+	height: 330px;
+	bottom: 0px;
+	padding: 10px;
+	margin: 0 auto;
+
+	input{
+		background: rgba(244,244,244,0.94);
+		border: 1px solid #66BEE5;
+		border-radius: 5px;
+		width: 100%;
+		height: 56px;
+	}
+
+	.delete{
+		width: 40px;
+		height: 30px;
+		position: absolute;
+		top: 22px;
+		right: 25px;
+		background-image: url(../img/icon/delete.svg);
+		background-size: 30px;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	.value{
+		background: rgba(229,229,229,0.92);
+		border-radius: 5px;
+		width: 70px;
+		margin-right: 4px;
+		margin-bottom: 4px;
+		padding: 12px 0;
+		float: left;
+		font-size: 28px;
+		text-align: center;
+
+		a{
+			color: $dark-blue;
+		}
+	}
+
+	.sign{
+		border-radius: 5px;
+		width: 100%;
+		background: #8FAECF;
+		margin-bottom: 4px;
+		padding: 1.5px 0;
+		text-align: center;
+		font-size: 28px;
+
+		a{
+			color: $dark-blue;
+		}
+	}
+
+	.left{
+		margin-top: 5px;
+		width: 77%;
+		height: 200px;
+		float: left;
+	}
+
+	.right{
+		margin-top: 5px;
+		height: 200px;
+		width: 23%;
+		float: right;
+	}
+
+	.bottom{
+		clear: both;
+		float: left;
+		width: 100%;
+		height: 50px;
+		margin-top: 4px;
+
+		.value{
+			padding: 3px 0;
+		}
+
+		.done{
+			background: $blue;
+			border-radius: 5px;
+			float: right;
+			width: 142px;
+			padding: 6px 0;
+			font-size: 24px;
+			text-align: center;
+
+			a{
+				color: #fff;
+			}
+
+		}
+	}
+
+
+}
+
+.date-box{
+	padding: 7px 0 7px 0;
+	background: #DAEAF1;
+	border: 1px solid #66BEE5;
+	border-radius: 5px;
+	text-align: center;
+	margin-bottom: 10px;
+
+	#today{
+		color: #39A2D1;
+		line-height: 21px;
+	}
+
+	.date{
+		color: #545454;
+		line-height: 21px;
+	}
+}
+
+.dropdown-menu .input-group{
+	width: 83%;
+}
+
+#checkbox{
+	margin-top: 13px;
+	margin-left: 10px;
+}
