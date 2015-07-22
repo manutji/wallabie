@@ -1,6 +1,7 @@
 // blue
 $blue : #2DA8DF;
 $light-blue : #80B4CC;
+$shadow-blue : #2894c4;
 $dark-blue : #1F6C8E;
 $very-dark-blue :#214454;
 // white & grey
@@ -255,3 +256,28 @@ body{
 	background-color: $dark-blue;
 	border-color: $dark-blue;
 }
+
+.navbar-toggle{
+	float: left;
+	margin-left: 7px;
+}
+
+.pos-absolute{
+	position: absolute;
+}
+
+.navbar-default .navbar-toggle{
+	border-color: $white;
+}
+
+.navbar-default .navbar-toggle .icon-bar{
+	background-color: $white;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus
+{
+  background-color: $shadow-blue;
+}
+// .navbar-default .navbar-collapse, .navbar-default .navbar-form{
+// 	background-color: $shadow-blue;
+// }

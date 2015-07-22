@@ -179,4 +179,20 @@ body {
   background-color: #1F6C8E;
   border-color: #1F6C8E; }
 
+.navbar-toggle {
+  float: left;
+  margin-left: 7px; }
+
+.pos-absolute {
+  position: absolute; }
+
+.navbar-default .navbar-toggle {
+  border-color: #ffffff; }
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffff; }
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #2894c4; }
+
 /*# sourceMappingURL=style.css.map */
