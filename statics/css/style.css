@@ -207,4 +207,7 @@ body {
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
   background-color: #2894c4; }
 
+.nav > li > a {
+  padding: 15px 13px; }
+
 /*# sourceMappingURL=style.css.map */
