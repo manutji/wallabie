@@ -1,6 +1,7 @@
 // blue
 $blue : #2DA8DF;
 $light-blue : #80B4CC;
+$shadow-blue : #2894c4;
 $dark-blue : #1F6C8E;
 $very-dark-blue :#214454;
 // white & grey
@@ -11,8 +12,11 @@ $grey : #DCDCDC;
 $dark-grey : #868686;
 
 $font-hind : 'Montserrat', sans-serif;
+$font-Lobster : 'Lobster', cursive;
 
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: $font-hind;
@@ -20,6 +24,10 @@ h1, h2, h3, h4, h5, h6 {
 
 body{
 	font-family: $font-hind;
+}
+
+.font-lobster{
+	font-family: $font-Lobster;
 }
 
 .navbar{
@@ -32,6 +40,7 @@ body{
 
 	.navbar-brand{
 		color: $white;
+		font-size: 28px;
 	}
 
 	.navbar-nav>li>a{
@@ -48,6 +57,15 @@ body{
 	background-color: $white;
 		color: $blue;
 }
+
+.navbar-nav {
+    width: 100%;
+    text-align: center;
+    li {
+      float: none;
+      display: inline-block;
+    }
+  }
 
 .top-buffer{
 	margin-top: 20px;
@@ -245,3 +263,38 @@ body{
 	margin-top: 13px;
 	margin-left: 10px;
 }
+
+.btn-primary{
+	background-color: $blue;
+	border-color: $light-blue;
+}
+
+.btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary,.btn-primary:hover{
+	background-color: $dark-blue;
+	border-color: $dark-blue;
+}
+
+.navbar-toggle{
+	float: left;
+	margin-left: 7px;
+}
+
+.pos-absolute{
+	position: absolute;
+}
+
+.navbar-default .navbar-toggle{
+	border-color: $white;
+}
+
+.navbar-default .navbar-toggle .icon-bar{
+	background-color: $white;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus
+{
+  background-color: $shadow-blue;
+}
+// .navbar-default .navbar-collapse, .navbar-default .navbar-form{
+// 	background-color: $shadow-blue;
+// }
