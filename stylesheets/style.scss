@@ -12,8 +12,10 @@ $grey : #DCDCDC;
 $dark-grey : #868686;
 
 $font-hind : 'Montserrat', sans-serif;
+$font-Lobster : 'Lobster', cursive;
 
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
+@import url(http://fonts.googleapis.com/css?family=Lobster);
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: $font-hind;
@@ -21,6 +23,10 @@ h1, h2, h3, h4, h5, h6 {
 
 body{
 	font-family: $font-hind;
+}
+
+.font-lobster{
+	font-family: $font-Lobster;
 }
 
 .navbar{
@@ -33,6 +39,7 @@ body{
 
 	.navbar-brand{
 		color: $white;
+		font-size: 28px;
 	}
 
 	.navbar-nav>li>a{
@@ -49,6 +56,16 @@ body{
 	background-color: $white;
 		color: $blue;
 }
+
+.navbar-nav {
+    width: 100%;
+    text-align: center;
+    li {
+      float: none;
+      display: inline-block;
+    }
+  }
+
 
 .top-buffer{
 	margin-top: 20px;
