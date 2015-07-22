@@ -15,14 +15,25 @@
   <!-- chart -->
   <script src="js/Chart.js-master/Chart.js"></script>
 
-
+  <script src="js/script.js"></script>
   <!-- Latest compiled and minified JavaScript -->
   <script src="js/bootstrap.min.js"></script>  
 
-  <script>
+  
+<script type="text/javascript">  
+
+                    var date = new Date().toJSON().slice(0,10);
+                     var yes = new Date();
+                     yes.setDate(yes.getDate() - 1);
+                     var yes1 = new Date();
+                     yes1.setDate(yes1.getDate() -2);
+  $.getJSON('/graph', function(items) {
+      });
+  console.log(total_date);
     var randomScalingFactor = function(){ return Math.round(Math.random()*800)};
     var lineChartData = {
-      labels : ["4 July","5 July","6 July","7 July","8 July","9 July","10 July"],
+      
+      labels : [date],
       datasets : [
     
         {
@@ -33,7 +44,7 @@
           pointStrokeColor : "#fff",
           pointHighlightFill : "#fff",
           pointHighlightStroke : "rgba(45,168,223,1)",
-          data : [120,250,200,390,500,123,330]
+          data : [total_date]
         }
       ]
 
@@ -50,10 +61,9 @@
   </script>
 
 
-
-
 </head>
 <body>
+
 <nav class="navbar navbar-default">
   <div class="container">
     <ul class="nav navbar-nav">
