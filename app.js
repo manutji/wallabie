@@ -33,6 +33,25 @@ app.post('/posttransaction',function(req,res){
 	
 });
 
+
+app.get('/getSumTransaction',function(req,res){
+	Item.aggregate( [
+	   {
+	     $group: {
+	        _id: "$date",
+	        total: { $sum: "$number" }
+	     }
+	   }
+	] , function( err, result) {
+
+		total = result[0].total;
+		res.json(total);
+	})
+ 
+});
+
+
+
 app.get('/transaction',function(req,res){
 	Item.find(function(err,items){
 		if(err)

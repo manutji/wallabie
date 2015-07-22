@@ -18,7 +18,7 @@
   <script src="js/script.js"></script>
   <!-- Latest compiled and minified JavaScript -->
   <script src="js/bootstrap.min.js"></script>  
-
+  <script src="js/transaction.js"></script>
   
 <script type="text/javascript">  
 
@@ -27,10 +27,16 @@
                      yes.setDate(yes.getDate() - 1);
                      var yes1 = new Date();
                      yes1.setDate(yes1.getDate() -2);
-  $.getJSON('/graph', function(items) {
-      });
-  console.log(total_date);
+  
+
+    $.getJSON('/getSumTransaction', function(total) {
+      
+    
+  
+
+
     var randomScalingFactor = function(){ return Math.round(Math.random()*800)};
+      
     var lineChartData = {
       
       labels : [date],
@@ -44,19 +50,21 @@
           pointStrokeColor : "#fff",
           pointHighlightFill : "#fff",
           pointHighlightStroke : "rgba(45,168,223,1)",
-          data : [total_date]
+          data : [total,randomScalingFactor()]
         }
       ]
 
-    }
 
+    }
+    
+      
   window.onload = function(){
     var ctx = document.getElementById("canvas").getContext("2d");
     window.myLine = new Chart(ctx).Line(lineChartData, {
       responsive: true
     });
   }
-
+});
 
   </script>
 
