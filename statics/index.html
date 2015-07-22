@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wallabie</title>
+	<link rel="shortcut icon" type="image/png" href="img/fav-icon.png"/>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/change-icon-name.css">
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="js/bootstrap.min.js"></script>	
+	<script src="js/script.js"></script>
+
+
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="pos-absolute navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand text-center col-xs-10 col-xs-offset-7" href="index.html">
+      		<!-- <img class="" alt="Brand" src="img/wallabie-logo.png" width="120"> -->
+			<p id="logo-name col-md-10 col-md-offset-7">Wallabie</p>
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+      <ul class="nav navbar-nav navbar-left pull-left visible-xs visible-sm">
+        <li class="dropdown">
+            <li><a href="index.html">Record</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="graph.html">Graph</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Setting</a></li>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container -->
+</nav>
+	
+<div class="container">
+  <div class="row top-buffer">
+    <div class="col-md-5">
+
+    		<div class="date-box">
+				<span id="today">Today</span>
+				<br>
+				<span class="date">10 July 2015</span>
+			</div>
+
+    		<div class="list-group">
+			  <!-- <a href="#" class="list-group-item light-blue">
+			    <h4 class="list-group-item-heading text-center">10 July 2015</h4>
+			  </a> -->
+
+			  <a href="index.html" class="list-group-item hidden-xs hidden-sm">
+			    <p class="list-group-item-text text-center"><i class="fa fa-pencil"></i> Record</p>
+			  </a>
+
+			  <a href="history.html" class="list-group-item hidden-xs hidden-sm">
+			    <p class="list-group-item-text text-center"><i class="fa fa-list-alt"></i> History</p>
+			  </a>
+
+			  <a href="graph.html" class="list-group-item hidden-xs hidden-sm">
+			    <p class="list-group-item-text text-center"><i class="fa fa-bar-chart"></i> Graph</p>
+			  </a>
+
+			  <a href="#" class="list-group-item hidden-xs hidden-sm">
+			    <p class="list-group-item-text text-center"><i class="fa fa-cog"></i> Setting</p>
+			  </a>
+
+			</div>
+   
+    </div>
+  	<div class="col-md-17 col-md-offset-1">
+  		<ul class="nav nav-tabs">
+		  <li role="presentation" class="active"><a href="#"><i class="fa fa-pencil"></i> Record</a></li>
+		</ul>
+		<br>
+		<div class="row">
+
+		<div id="category" class="dropdown">
+			<a id="dLabel" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+				<div class="thumb col-md-4 col-sm-4 col-xs-8">
+					<div class="icon blue"><i class="fa fa-Income"></i></div>
+					<p class="text-center">Income</p>
+				</div>
+			</a>
+
+			<ul class="dropdown-menu hidden-xs hidden-sm" aria-labelledby="dLabel">
+
+				<li>
+					<form>
+					<div class="input-group pull-left">
+					  <span class="input-group-addon"><i class="fa fa-calculator"></i></span>
+					  <input type="text" value="5+7" class="form-control" id="input" />
+					  <span class="input-group-addon">
+					  		<div id="wrapper">
+					      	<div id="result"></div>
+					    	</div>
+					    </span>
+					</div>
+
+					<!-- <input class="btn btn-default pull-right btn-change" value="Calculate" id="simplify"  /> -->
+					<button type="button" class="btn btn-default pull-right btn-change" data-save-text="Save Result" id="simplify" autocomplete="off">Calculate</button>
+					</form>
+				</li>
+			</ul>
+		</div>
+
+			<div class="thumb col-md-4 col-sm-4 col-xs-8">
+				<div class="icon"><i class="fa fa-General"></i></div>
+				<p class="text-center">General</p>
+			</div>
+
+			
+			<div class="thumb col-md-4 col-sm-4 col-xs-8">
+				<div class="icon"><i class="fa fa-Food"></i></div>
+				<p class="text-center">Food</p>
+			</div>
+
+			<div class="thumb col-md-4 col-sm-4 col-xs-8">
+				<div class="icon"><i class="fa fa-Mobile"></i></div>
+				<p class="text-center">Mobile</p>
+			</div>
+
+			<div class="thumb col-md-4 col-sm-4 col-xs-8">
+				<div class="icon"><i class="fa fa-Drinks"></i></div>
+				<p class="text-center">Drinks</p>
+			</div>
+
+			<div class="thumb col-md-4 col-sm-4 col-xs-8">
+				<div class="icon"><i class="fa fa-Shopping"></i></div>
+				<p class="text-center">Shopping</p>
+			</div>
+
+			<div class="thumb col-md-4 col-sm-4 col-xs-8">
+				<div class="icon"><i class="fa fa-Groceries"></i></div>
+				<p class="text-center">Groceries</p>
+			</div>
+
+			<div class="thumb col-md-4 col-sm-4 col-xs-8">
+				<div class="icon"><i class="fa fa-Entertain"></i></div>
+				<p class="text-center">Entertain</p>
+			</div>
+
+			<div class="thumb col-md-4 col-sm-4 col-xs-8">
+				<div class="icon"><i class="fa fa-Movies"></i></div>
+				<p class="text-center">Movies</p>
+			</div>
+
+			<div class="thumb col-md-4 col-sm-4 col-xs-8">
+				<div class="icon"><i class="fa fa-Social"></i></div>
+				<p class="text-center">Social</p>
+			</div>
+
+			<div class="thumb col-md-4 col-sm-4 col-xs-8">
+				<div class="icon"><i class="fa fa-Personal"></i></div>
+				<p class="text-center">Personal</p>
+			</div>
+
+			<div class="thumb col-md-4 col-sm-4 col-xs-8">
+				<div class="icon"><i class="fa fa-Transport"></i></div>
+				<p class="text-center">Transport</p>
+			</div>
+
+			<div class="thumb col-md-4 col-sm-4 col-xs-8">
+				<div class="icon"><i class="fa fa-Computer"></i></div>
+				<p class="text-center">Computer</p>
+			</div>
+
+			<div class="thumb col-md-4 col-sm-4 col-xs-8">
+				<div class="icon"><i class="fa fa-Gift"></i></div>
+				<p class="text-center">Gift</p>
+			</div>
+
+			<div class="thumb col-md-4 col-sm-4 col-xs-8">
+				<div class="icon"><i class="fa fa-House"></i></div>
+				<p class="text-center">House</p>
+			</div>
+
+			<div class="thumb col-md-4 col-sm-4 col-xs-8">
+				<div class="icon"><i class="fa fa-Travel"></i></div>
+				<p class="text-center">Travel</p>
+			</div>
+
+			<div class="thumb col-md-4 col-sm-4 col-xs-8">
+				<div class="icon"><i class="fa fa-Medical"></i></div>
+				<p class="text-center">Medical</p>
+			</div>
+
+
+		</div>
+  	</div>
+  </div>
+</div> <!-- container -->
+
+<!-- mobile calculator -->
+
+	<section class="calculator visible-xs">
+		<div id="cal" class="cal-bg">
+		<div class="cal-body">
+			<div id="total">
+			</div>
+			<div id="clear"class="delete"></div>
+
+			<div class="left">
+			<div id="numbers">
+				<a href="#"><div class="value">1</div></a>
+				<a href="#"><div class="value">2</div></a>
+				<a href="#"><div class="value">3</div></a>
+				<a href="#"><div class="value">4</div></a>
+				<a href="#"><div class="value">5</div></a>
+				<a href="#"><div class="value">6</div></a>
+				<a href="#"><div class="value">7</div></a>
+				<a href="#"><div class="value">8</div></a>
+				<a href="#"><div class="value">9</div></a>
+			</div>
+			</div>
+			
+			<div class="right">
+			<div id="numbers">
+				<a href="#"><div class="sign">+</div></a>
+				<a href="#"><div class="sign">-</div></a>
+				<a href="#"><div class="sign">*</div></a>
+				<a href="#"><div class="sign">/</div></a>
+			</div>
+				
+			</div>
+			
+			<div class="bottom">
+				<div id="numbers">
+				<div class="value">
+					<a href="#">.</a>
+				</div>
+				<a href="#"><div class="value">0</div></a>
+				
+				</div>
+				<a href="#"><div id="equals" class="done">
+					<i class="fa fa-check"></i></div></a>
+				<a href="#"><div id="equals1" class="done">
+					<i class="fa fa-check"></i>aaaa</div></a>
+				
+			</div>
+
+			
+		</div> <!-- cal-bg -->
+
+		</div> <!-- cal-bg -->
+	</section>
+
+
+
+
+
+</body>
+</html>

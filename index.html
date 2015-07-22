@@ -22,29 +22,30 @@
 <body>
 <nav class="navbar navbar-default">
   <div class="container">
-  	<ul class="nav navbar-nav">
-	        <li class="pull-left">
-	        	 <button type="button" class="pos-absolute navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-			        <span class="sr-only">Toggle navigation</span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			      </button>
-	        </li>
-	        <li>
-	        	<a class="navbar-brand" href="index.html">
-      				<p class="logo-name font-lobster">Wallabie</p>
-      			</a>
-	        </li>
-    </ul>
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">
+      		<img class="pull-left hide" alt="Brand" src="img/logo.png">
+			<p class="pull-left" id="logo-name">Wallabie</p>
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-left pull-left visible-xs visible-sm">
+      
+      <ul class="nav navbar-nav navbar-right visible-xs visible-sm">
         <li class="dropdown">
             <li><a href="index.html">Record</a></li>
             <li><a href="history.html">History</a></li>
             <li><a href="graph.html">Graph</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="setting.html">Setting</a></li>
+            <li><a href="#">Setting</a></li>
         </li>
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -78,7 +79,7 @@
 			    <p class="list-group-item-text text-center"><i class="fa fa-bar-chart"></i> Graph</p>
 			  </a>
 
-			  <a href="setting.html" class="list-group-item hidden-xs hidden-sm">
+			  <a href="#" class="list-group-item hidden-xs hidden-sm">
 			    <p class="list-group-item-text text-center"><i class="fa fa-cog"></i> Setting</p>
 			  </a>
 
@@ -95,7 +96,7 @@
 		<div class="dropdown">
 			<a id="dLabel" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 				<div class="thumb col-md-4 col-sm-4 col-xs-8">
-					<div class="icon blue"><i class="fa fa-Income"></i></div>
+					<div class="icon blue"><i class="fa fa-money"></i></div>
 					<div class="text-center">Income</div>
 				</div>
 			</a>
@@ -122,83 +123,83 @@
 		</div>
 
 			<div class="thumb col-md-4 col-sm-4 col-xs-8">
-				<div class="icon"><i class="fa fa-General"></i></div>
+				<div class="icon"><i class="fa fa-tag"></i></div>
 				<div class="text-center">General</div>
 			</div>
 
 			
 			<div class="thumb col-md-4 col-sm-4 col-xs-8">
-				<div class="icon"><i class="fa fa-Food"></i></div>
+				<div class="icon"><i class="fa fa-cutlery"></i></div>
 				<div class="text-center">Food</div>
 			</div>
 
 			<div class="thumb col-md-4 col-sm-4 col-xs-8">
-				<div class="icon"><i class="fa fa-Mobile"></i></div>
+				<div class="icon"><i class="fa fa-mobile"></i></div>
 				<div class="text-center">Mobile</div>
 			</div>
 
 			<div class="thumb col-md-4 col-sm-4 col-xs-8">
-				<div class="icon"><i class="fa fa-Drinks"></i></div>
+				<div class="icon"><i class="fa fa-coffee"></i></div>
 				<div class="text-center">Drinks</div>
 			</div>
 
 			<div class="thumb col-md-4 col-sm-4 col-xs-8">
-				<div class="icon"><i class="fa fa-Shopping"></i></div>
+				<div class="icon"><i class="fa fa-shopping-cart"></i></div>
 				<div class="text-center">Shopping</div>
 			</div>
 
 			<div class="thumb col-md-4 col-sm-4 col-xs-8">
-				<div class="icon"><i class="fa fa-Groceries"></i></div>
+				<div class="icon"><i class="fa fa-barcode"></i></div>
 				<div class="text-center">Groceries</div>
 			</div>
 
 			<div class="thumb col-md-4 col-sm-4 col-xs-8">
-				<div class="icon"><i class="fa fa-Entertain"></i></div>
+				<div class="icon"><i class="fa fa-microphone"></i></div>
 				<div class="text-center">Entertain</div>
 			</div>
 
 			<div class="thumb col-md-4 col-sm-4 col-xs-8">
-				<div class="icon"><i class="fa fa-Movies"></i></div>
+				<div class="icon"><i class="fa fa-film"></i></div>
 				<div class="text-center">Movies</div>
 			</div>
 
 			<div class="thumb col-md-4 col-sm-4 col-xs-8">
-				<div class="icon"><i class="fa fa-Social"></i></div>
+				<div class="icon"><i class="fa fa-users"></i></div>
 				<div class="text-center">Social</div>
 			</div>
 
 			<div class="thumb col-md-4 col-sm-4 col-xs-8">
-				<div class="icon"><i class="fa fa-Personal"></i></div>
+				<div class="icon"><i class="fa fa-user"></i></div>
 				<div class="text-center">Personal</div>
 			</div>
 
 			<div class="thumb col-md-4 col-sm-4 col-xs-8">
-				<div class="icon"><i class="fa fa-Transport"></i></div>
+				<div class="icon"><i class="fa fa-bus"></i></div>
 				<div class="text-center">Transport</div>
 			</div>
 
 			<div class="thumb col-md-4 col-sm-4 col-xs-8">
-				<div class="icon"><i class="fa fa-Computer"></i></div>
+				<div class="icon"><i class="fa fa-desktop"></i></div>
 				<div class="text-center">Computer</div>
 			</div>
 
 			<div class="thumb col-md-4 col-sm-4 col-xs-8">
-				<div class="icon"><i class="fa fa-Gift"></i></div>
+				<div class="icon"><i class="fa fa-gift"></i></div>
 				<div class="text-center">Gift</div>
 			</div>
 
 			<div class="thumb col-md-4 col-sm-4 col-xs-8">
-				<div class="icon"><i class="fa fa-House"></i></div>
+				<div class="icon"><i class="fa fa-home"></i></div>
 				<div class="text-center">House</div>
 			</div>
 
 			<div class="thumb col-md-4 col-sm-4 col-xs-8">
-				<div class="icon"><i class="fa fa-Travel"></i></div>
+				<div class="icon"><i class="fa fa-plane"></i></div>
 				<div class="text-center">Travel</div>
 			</div>
 
 			<div class="thumb col-md-4 col-sm-4 col-xs-8">
-				<div class="icon"><i class="fa fa-Medical"></i></div>
+				<div class="icon"><i class="fa fa-medkit"></i></div>
 				<div class="text-center">Medical</div>
 			</div>
 

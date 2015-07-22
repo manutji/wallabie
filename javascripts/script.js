@@ -301,3 +301,179 @@ window.onload = function() {
   simplifyText();
 
 };
+
+
+// localstorage.setItem("income",income);
+// document.getElementById('result').innerHTML = localstorage.getItem("income");
+// window.onload = function(){
+// if (typeof(Storage) != "undefined") {
+//     // Store
+//     localStorage.setItem("income", income.cash);
+//     // Retrieve
+//     document.getElementById("result").innerHTML = localStorage.getItem("income");
+// } else {
+//     document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+// }
+// }
+var spend = {
+  cash:0,
+  add: function(pay){
+    this.cash += pay;
+    return pay;
+  }
+}
+
+
+var income = {
+  cash:0,
+  add: function(income){
+    this.cash += income;
+    return income;
+  }
+}
+
+var total = function(x,y){
+  return x - y;
+  
+}
+
+// console.log("spend " +  spend.cash);
+// console.log("income " +  income.cash);
+// console.log(total(income.cash,spend.cash));
+// console.log(income);
+// console.log(spend);
+/// calculator /////
+$(document).ready(function(){
+  var date = new Date().toJSON().slice(0,10);
+  $('.result').hide();
+  $('#equals1').hide();
+  $('#menu-toggle').on('click', function(e){
+    $('html').toggleClass('menu-active');
+      e.preventDefault();
+  });
+
+  $( '.icon' ).click(function() {
+      $( '.cal-bg' ).slideToggle(  );
+  });
+  
+  var testNumLength = function(number) {
+        if (number.length > 9) {
+            totaldiv.text(number.substr(number.length-9,9));
+            if (number.length > 15) {
+                number = "";
+                totaldiv.text("Err");
+            }
+        } 
+    };
+  var number = "";
+    var newnumber = "";
+    var operator = "";
+    var cate = "";
+    var totaldiv = $("#total");
+    totaldiv.text("0");
+  $('#category p').click(function(){
+      cate = $(this).text();
+      $("#equals1").hide();
+      $("#equals").show();
+      return cate;
+    });
+    $("#numbers a").not("#clear,#clearall").click(function(){
+    number += $(this).text();
+    totaldiv.text(number);
+    testNumLength(number);
+    });
+    $("#clear,#clearall").click(function(){
+    number = "";
+    totaldiv.text("0");
+    $("#equals1").hide();
+    $("#equals").show();
+    if ($(this).attr("id") === "clearall") {
+      newnumber = "";
+    }
+    });
+    $("#equals").click(function(){
+      numbers = eval(number);
+      totaldiv.text(numbers);
+      testNumLength(number);
+      $("#equals1").show();
+      $("#equals").hide();
+      
+    });
+    $("#equals1").click(function(){
+      item(numbers,cate,date);
+      number = "";
+      totaldiv.text("0");
+      cate = "";
+      $("#result").show().delay(1500).fadeOut(300);
+      $("#cal").hide();
+    });
+});
+
+///////list//////
+
+
+function lists(){
+  var listlenght = list.length;
+  for(var i = 0; i < listlenght ; i++){
+    printlist(list[i]);
+  }
+}
+function printlist(list){
+  console.log(list);
+}
+var item = function(number,category,date){
+  var list = [];
+  list.push(number,category,date);
+  list[list.length] = {
+  category:category,
+  number:number,
+  date:date
+  }
+  localStorage.setItem('session', JSON.stringify(list));
+  if(category === "Income"){
+  income.add(number);
+  }else{
+  spend.add(number);
+  }
+
+
+  data = {
+    number:number,
+    category:category,
+    date:date
+  }
+
+  console.log(data)
+  $.ajax({
+    type: "POST",
+    url: '/list',
+    data: data,
+    dataType: 'json',
+    success: function (item) {
+      // console.log(items);
+      // for(i=1; i < items.length; i++){
+      //  console.log(items[i].number);
+      // }
+    }
+  });
+  // $.post( "/money", data, function( data ) {
+  //   alert(data)
+  // });
+  console.log(list);
+  console.log(category);
+  console.log("income = "+ income.cash);
+  console.log("spend = "+ spend.cash);
+}
+
+  
+  
+// var list = JSON.parse(localStorage.getItem('session'));
+// for (var i=0; i<list.length; i++){
+//     var lists = list[i];
+//     console.log(lists);
+// }    
+// sessionStorage.clear();
+// localStorage.clear();
+
+
+

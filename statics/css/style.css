@@ -1,0 +1,174 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif; }
+
+body {
+  font-family: "Montserrat", sans-serif; }
+
+.navbar {
+  border-radius: 0px; }
+
+.navbar-default {
+  background-color: #2DA8DF;
+  border: 0px;
+  border-bottom: 1px solid #1F6C8E; }
+  .navbar-default .navbar-brand {
+    color: #ffffff; }
+  .navbar-default .navbar-nav > li > a {
+    color: #ffffff; }
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #1F6C8E; }
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  background-color: #ffffff;
+  color: #2DA8DF; }
+
+.top-buffer {
+  margin-top: 20px; }
+
+.list-group-item.light-blue {
+  background-color: #2DA8DF;
+  border-color: #2DA8DF; }
+
+.thumb {
+  margin-top: 5px;
+  margin-bottom: 15px; }
+
+.icon {
+  width: 78px;
+  height: 78px;
+  background: #214454;
+  border-radius: 12px;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0 auto;
+  text-align: center; }
+  .icon i {
+    margin-top: 23px;
+    font-size: 35px;
+    color: #ffffff; }
+
+.icon.blue {
+  background-color: #2DA8DF; }
+
+.light-blue:hover {
+  background-color: #2DA8DF !important; }
+
+.circle-date {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  background-color: #868686;
+  color: #ffffff;
+  text-align: center;
+  padding: 22px; }
+
+.dropdown-menu {
+  top: 100px;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.cal-bg {
+  width: 100%;
+  height: 330px;
+  position: fixed;
+  bottom: 0px;
+  background: rgba(72, 95, 115, 0.71); }
+
+.cal-body {
+  width: 310px;
+  height: 330px;
+  bottom: 0px;
+  padding: 10px;
+  margin: 0 auto; }
+  .cal-body #total {
+    background: rgba(244, 244, 244, 0.94);
+    border: 1px solid #66BEE5;
+    border-radius: 5px;
+    width: 100%;
+    height: 56px; }
+  .cal-body .delete {
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    top: 22px;
+    right: 25px;
+    background-image: url(../img/icon/delete.svg);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .cal-body .value {
+    background: rgba(229, 229, 229, 0.92);
+    border-radius: 5px;
+    width: 70px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    padding: 12px 0;
+    float: left;
+    font-size: 28px;
+    text-align: center; }
+    .cal-body .value a {
+      color: #1F6C8E; }
+  .cal-body .sign {
+    border-radius: 5px;
+    width: 100%;
+    background: #8FAECF;
+    margin-bottom: 4px;
+    padding: 1.5px 0;
+    text-align: center;
+    font-size: 28px; }
+    .cal-body .sign a {
+      color: #1F6C8E; }
+  .cal-body .left {
+    margin-top: 5px;
+    width: 77%;
+    height: 200px;
+    float: left; }
+  .cal-body .right {
+    margin-top: 5px;
+    height: 200px;
+    width: 23%;
+    float: right; }
+  .cal-body .bottom {
+    clear: both;
+    float: left;
+    width: 100%;
+    height: 50px;
+    margin-top: 4px; }
+    .cal-body .bottom .value {
+      padding: 3px 0; }
+    .cal-body .bottom .done {
+      background: #2DA8DF;
+      border-radius: 5px;
+      float: right;
+      width: 142px;
+      padding: 6px 0;
+      font-size: 24px;
+      text-align: center; }
+      .cal-body .bottom .done a {
+        color: #fff; }
+
+.date-box {
+  padding: 7px 0 7px 0;
+  background: #DAEAF1;
+  border: 1px solid #66BEE5;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 10px; }
+  .date-box #today {
+    color: #39A2D1;
+    line-height: 21px; }
+  .date-box .date {
+    color: #545454;
+    line-height: 21px; }
+
+.dropdown-menu .input-group {
+  width: 83%; }
+
+#checkbox {
+  margin-top: 13px;
+  margin-left: 10px; }
+
+/*# sourceMappingURL=style.css.map */
