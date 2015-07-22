@@ -245,3 +245,13 @@ body{
 	margin-top: 13px;
 	margin-left: 10px;
 }
+
+.btn-primary{
+	background-color: $blue;
+	border-color: $light-blue;
+}
+
+.btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary,.btn-primary:hover{
+	background-color: $dark-blue;
+	border-color: $dark-blue;
+}

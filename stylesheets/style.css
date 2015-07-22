@@ -171,4 +171,12 @@ body {
   margin-top: 13px;
   margin-left: 10px; }
 
+.btn-primary {
+  background-color: #2DA8DF;
+  border-color: #80B4CC; }
+
+.btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary, .btn-primary:hover {
+  background-color: #1F6C8E;
+  border-color: #1F6C8E; }
+
 /*# sourceMappingURL=style.css.map */

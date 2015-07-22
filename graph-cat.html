@@ -6,8 +6,9 @@
   
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
-  <link rel="stylesheet" href="stylesheets/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="stylesheets/style.css">
+  
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -20,32 +21,35 @@
   <script src="javascripts/bootstrap.min.js"></script>  
 
   <script>
-    var randomScalingFactor = function(){ return Math.round(Math.random()*800)};
-    var lineChartData = {
-      labels : ["4 July","5 July","6 July","7 July","8 July","9 July","10 July"],
-      datasets : [
-    
-        {
-          label: "My First dataset",
-          fillColor : "rgba(45,168,223,0.2)",
-          strokeColor : "rgba(45,168,223,1)",
-          pointColor : "rgba(45,168,223,1)",
-          pointStrokeColor : "#fff",
-          pointHighlightFill : "#fff",
-          pointHighlightStroke : "rgba(45,168,223,1)",
-          data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
-        }
-      ]
+  var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
 
-    }
+  var barChartData = {
+    labels : ["Income","Food" ,"Drink","Shopping","Transport","Mobile","Traval" ,"Groceries","Gift","Entertain"],
+    datasets : [
+      {
+        fillColor : "rgba(220,220,220,0.5)",
+        strokeColor : "rgba(220,220,220,0.8)",
+        highlightFill: "rgba(220,220,220,0.75)",
+        highlightStroke: "rgba(220,220,220,1)",
+        data : [2000,1400,200,700,150,400,30,356,225,90]
+      }
+      // {
+      //   fillColor : "rgba(151,187,205,0.5)",
+      //   strokeColor : "rgba(151,187,205,0.8)",
+      //   highlightFill : "rgba(151,187,205,0.75)",
+      //   highlightStroke : "rgba(151,187,205,1)",
+      //   data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+      // }
+      
+    ]
 
+  }
   window.onload = function(){
     var ctx = document.getElementById("canvas").getContext("2d");
-    window.myLine = new Chart(ctx).Line(lineChartData, {
-      responsive: true
+    window.myBar = new Chart(ctx).Bar(barChartData, {
+      responsive : true
     });
   }
-
 
   </script>
 
@@ -111,14 +115,30 @@
         <a href="#" class="list-group-item">
           <p class="list-group-item-text text-center"><i class="fa fa-cog"></i> Setting</p>
         </a>
-
       </div>
     </div>
+
     <div class="col-md-17 col-md-offset-1">
       <ul class="nav nav-tabs">
         <li role="presentation"><a href="graph.html"><i class="fa fa-calendar"></i> Date</a></li>
         <li role="presentation" class="active"><a href="#"><i class="fa fa-tags"></i> Category</a></li>
       </ul>
+      <br>
+       <div class="btn-group pull-right" data-toggle="buttons">
+           <label class="btn btn-primary active">
+              <input type="radio" name="options" id="option1" autocomplete="off" checked> Day
+            </label>
+            <label class="btn btn-primary">
+              <input type="radio" name="options" id="option1" autocomplete="off" checked> Week
+            </label>
+            <label class="btn btn-primary">
+              <input type="radio" name="options" id="option2" autocomplete="off"> Month
+            </label>
+            <label class="btn btn-primary">
+              <input type="radio" name="options" id="option3" autocomplete="off"> Year
+            </label>
+          </div>
+       <br>
       <br>
         <div style="width:100%">
           <div>
