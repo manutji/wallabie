@@ -101,90 +101,38 @@
                       var yessterday = yes.toJSON().slice(0,10);
 
                       document.getElementById("date").innerHTML = date;
+                      var total_date=0;
                      items.forEach( function (items) {
                       if(date === items.date){
                         $("#demo-list").prepend("<tr><td class='col-md-1 col-xs-1'><i class='fa fa-"+items.category+"'></i></td><td class='col-md-21 col-xs-19'>"+items.category+"</td><td class='col-md-2 col-xs-4'>"+items.number+"</td></tr>") 
+                        total_date=items.number+total_date;
                       }
 
                         
                      });
 
+                     document.getElementById("total-date").innerHTML = total_date;
+
+
                   });
                 });
 
               </script>
+
     <div  class="panel panel-info">
       <!-- Default panel contents -->
-      <div id="date" class="panel-heading">17 July 2015</div>
+      <div class="panel-heading">
+        <span id="date" >17 July 2015</span>
+        <div class="pull-right">Total <span id="total-date" >330</span></div>
+
+      </div>
+
 
       <!-- Table -->
       <table id="demo-list" class="table">
         
       </table>
     </div>
-
-    <div class="panel panel-info">
-      <!-- Default panel contents -->
-      <div class="panel-heading">16 July 2015</div>
-
-      <!-- Table -->
-      <table class="table">
-        <tr>
-          <td class="col-md-1 col-xs-1"><i class="fa fa-gift"></i> </td>
-          <td class="col-md-21 col-xs-19">Gift</td>
-          <td class="col-md-2 col-xs-4">500</td>
-        </tr>
-        <tr>
-          <td class="col-md-1 col-xs-1"><i class="fa fa-gift"></i> </td>
-          <td class="col-md-21 col-xs-19">Gift</td>
-          <td class="col-md-2 col-xs-4">500</td>
-        </tr>
-        <tr>
-          <td class="col-md-1 col-xs-1"><i class="fa fa-gift"></i> </td>
-          <td class="col-md-21 col-xs-19">Gift</td>
-          <td class="col-md-2 col-xs-4">500</td>
-        </tr>
-        <tr>
-          <td class="col-md-1 col-xs-1"><i class="fa fa-gift"></i> </td>
-          <td class="col-md-21 col-xs-19">Gift</td>
-          <td class="col-md-2 col-xs-4">500</td>
-        </tr>
-
-      </table>
-    </div> <!-- panel -->
-
-    <div class="panel panel-info">
-      <!-- Default panel contents -->
-      <div class="panel-heading">16 July 2015</div>
-
-      <!-- Table -->
-      <table class="table">
-        <tr>
-          <td class="col-md-1 col-xs-1"><i class="fa fa-gift"></i> </td>
-          <td class="col-md-21 col-xs-19">Gift</td>
-          <td class="col-md-2 col-xs-4">500</td>
-        </tr>
-        <tr>
-          <td class="col-md-1 col-xs-1"><i class="fa fa-gift"></i> </td>
-          <td class="col-md-21 col-xs-19">Gift</td>
-          <td class="col-md-2 col-xs-4">500</td>
-        </tr>
-        <tr>
-          <td class="col-md-1 col-xs-1"><i class="fa fa-gift"></i> </td>
-          <td class="col-md-21 col-xs-19">Gift</td>
-          <td class="col-md-2 col-xs-4">500</td>
-        </tr>
-        <tr>
-          <td class="col-md-1 col-xs-1"><i class="fa fa-gift"></i> </td>
-          <td class="col-md-21 col-xs-19">Gift</td>
-          <td class="col-md-2 col-xs-4">500</td>
-        </tr>
-
-      </table>
-    </div> <!-- panel -->
-
-
-
 
 		</div>
   	</div>
