@@ -207,4 +207,10 @@ body {
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
   background-color: #2894c4; }
 
+.nav > li > a {
+  padding: 15px 13px; }
+
+p.logo-name {
+  margin: 5px 0 10px !important; }
+
 /*# sourceMappingURL=style.css.map */

@@ -298,3 +298,11 @@ body{
 // .navbar-default .navbar-collapse, .navbar-default .navbar-form{
 // 	background-color: $shadow-blue;
 // }
+
+.nav>li>a{
+	padding: 15px 13px;
+}
+
+p.logo-name{
+	margin: 5px 0 10px !important;
+}
