@@ -1,29 +1,31 @@
-var total_date=0;
+
 
 // $(function(){
-    $.getJSON('/transaction', function(items) {
-       var date = new Date().toJSON().slice(0,10);
-       var yes = new Date();
-       yes.setDate(yes.getDate() - 1);
-       var yes1 = new Date();
-       yes1.setDate(yes1.getDate() -2);
-
-        var yessterday = yes.toJSON().slice(0,10);
-
-        document.getElementById("date").innerHTML = date;
-        
-       items.forEach( function (items){
-        if(date === items.date){
-          $("#demo-list").prepend("<tr><td class='col-md-1 col-xs-1'><i class='fa fa-"+items.category+"'></i></td><td class='col-md-21 col-xs-19'>"+items.category+"</td><td class='col-md-2 col-xs-4'>"+items.number+"</td></tr>") 
-          total_date=items.number+total_date;
+    $.getJSON('/transaction', function(datas) { 
+      for( a in datas){
+        var sum = 0;
+        console.log(a);
+        for(var i=0; i<datas[a].length; i++){
+          if(datas[a][i].category === "Income"){
+            sum += datas[a][i].number;
+          }else{
+            sum -= datas[a][i].number;
+          } 
+          console.log(datas[a][i]);
         }
-
-          
-       });
-
-       document.getElementById("total-date").innerHTML = total_date;
-
-
+        $("#his").append("<div class='panel-heading'><span id='date'>"+a+"</span><div class='pull-right'>Total"+" "+sum+"<span id='total-date'></span></div></div>")
+        console.log(sum);
+        for(var i=0; i<datas[a].length; i++){
+          $("#his").append("<table id='demo-list' class='table'><tr><td class='col-md-1 col-xs-1'><i class='fa fa-"+datas[a][i].category+"'></i></td><td class='col-md-21 col-xs-19'>"+datas[a][i].category+"</td><td class='col-md-2 col-xs-4'>"+datas[a][i].number+"</td></tr></table>") 
+        }
+      }
+     
+      
+       // datas.forEach( function (datas){
+       //    console.log(datas);
+       //    // $("#demo-list").append("<tr><td class='col-md-1 col-xs-1'><i class='fa fa-"+items.category+"'></i></td><td class='col-md-21 col-xs-19'>"+items.category+"</td><td class='col-md-2 col-xs-4'>"+items.number+"</td></tr>") 
+       //    // total_date=items.number+total_date;
+       // });
     });
 
   // });

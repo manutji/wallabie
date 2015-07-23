@@ -7,4 +7,12 @@ var ItemSchema = new Schema({
 	date:String
 })
 
+var Income = new Schema({
+	number:Number
+})
+
+var Expend = new Schema({
+	number:Number
+})
+
 module.exports = mongoose.model('Item',ItemSchema);

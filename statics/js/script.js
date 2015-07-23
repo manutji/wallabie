@@ -298,11 +298,11 @@ function simplifyText(event) {
   }
 }
 
-window.onload = function() {
-  document.getElementById("simplify").addEventListener("click", simplifyText);
-  simplifyText();
+// window.onload = function() {
+//   document.getElementById("simplify").addEventListener("click", simplifyText);
+//   simplifyText();
 
-};
+// };
 
 
 // localstorage.setItem("income",income);
@@ -424,18 +424,18 @@ function printlist(list){
   console.log(list);
 }
 var item = function(number,category,date){
-  var list = [];
-  list.push(number,category,date);
-  list[list.length] = {
-  category:category,
-  number:number,
-  date:date
+    var list = [];
+    list.push(number,category,date);
+    list[list.length] = {
+      category:category,
+      number:number,
+      date:date
   }
-  localStorage.setItem('session', JSON.stringify(list));
+  
   if(category === "Income"){
-  income.add(number);
+    income.add(number);
   }else{
-  spend.add(number);
+    spend.add(number);
   }
 
 

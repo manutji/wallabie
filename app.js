@@ -4,6 +4,8 @@ var bodyParser = require('body-parser');
 var app = express();
 var Item = require('./app/models/item');
 var mongoose = require('mongoose');
+var _ = require('lodash');
+var moment = require('moment');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
@@ -36,6 +38,7 @@ app.post('/posttransaction',function(req,res){
 
 app.get('/getSumTransaction',function(req,res){
 	Item.aggregate( [
+		{ $match: { category: 'Income' } },
 	   {
 	     $group: {
 	        _id: "$date",
@@ -47,22 +50,47 @@ app.get('/getSumTransaction',function(req,res){
 		total = result[0].total;
 		res.json(total);
 	})
- 
 });
+app.get('/getSumExpend',function(req,res){
+	Item.aggregate( [
+		{ $match: {category: 'General'} },
+	   {
+	     $group: {
+	        _id: "$date",
+	        total: { $sum: "$number" }
+	     }
+	   }
+	] , function( err, result) {
 
+		total = result[0].total;
+		res.json(total);
+	})
+});
 
 
 app.get('/transaction',function(req,res){
-	Item.find(function(err,items){
-		if(err)
-			res.send(err);
-		res.json(items);
-	});
-
-	// data =
-	// 	list : [4,5]
-	// res.render '/list', data
+	Item.find({$query:{}, $orderby: {date:-1 } },function(err,items)
+	{
+ 		datas = _.groupBy (items ,function(item){
+ 			return moment(item.date).format('YYYY-MM-DD');
+ 		});
+ 		keys = _.keys(datas);
+		res.json(datas);
+	})
 });
+
+app.get('/trangraph',function(req,res){
+	sum = [];
+	Item.find({$query:{}, $orderby: {date:-1 } },function(err,items)
+	{
+ 		datas = _.groupBy (items ,function(item){
+ 			return moment(item.date).format('YYYY-MM-DD');
+ 		});
+ 		keys = _.keys(datas);
+ 		res.json(keys);
+	})
+});
+
 
 app.delete('/list/:item_id',function(req,res){
 	Item.remove({_id:req.params.item_id},function(err,item){
