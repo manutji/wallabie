@@ -67,6 +67,10 @@ body{
     }
   }
 
+.container.body{
+	margin-top: 60px;
+}
+
 .top-buffer{
 	margin-top: 20px;
 }
@@ -305,4 +309,19 @@ body{
 
 p.logo-name{
 	margin: 5px 0 10px !important;
+<<<<<<< HEAD
+=======
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+	.container.body{
+		margin-top: 110px;
+	}
+}
+
+@media (max-width: 767px) {
+	.container.body{
+		margin-top: 70px;
+	}
+>>>>>>> 7bbc5be01263839b327287df64898f36b34a5c92
 }

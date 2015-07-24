@@ -78,7 +78,22 @@ app.get('/transaction',function(req,res){
 		res.json(datas);
 	})
 });
-
+app.get('/transactionMonth',function(req,res){
+	Item.find({$query:{},$orderby:{date:-1}},function(err,items)
+	{
+		datas = _.groupBy(items,function(item){
+			return moment(item,date).format('YYYY-MM');
+		})
+	})
+});
+app.get('/transactionYear',function(req,res){
+	Item.find({$query:{},$orderby:{date:-1}},function(err,items)
+	{
+		datas = _.groupBy(items,function(item){
+			return moment(item,date).format('YYYY');
+		})
+	})
+});
 app.get('/trangraph',function(req,res){
 	sum = [];
 	Item.find({$query:{}, $orderby: {date:-1 } },function(err,items)
